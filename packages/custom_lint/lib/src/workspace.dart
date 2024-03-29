@@ -802,11 +802,11 @@ publish_to: 'none'
       tempDir.pubspecOverrides.writeAsStringSync(pubspecOverride);
     }
 
-    try {
-      await resolvePackageConfigOffline(tempDir);
-    } catch (_) {
-      await runPubGet(tempDir);
-    }
+    // try {
+    await resolvePackageConfigOffline(tempDir);
+    // } catch (_) {
+    //   await runPubGet(tempDir);
+    // }
   }
 
   /// Attempts at creating the plugin host without having to run "pub get".
